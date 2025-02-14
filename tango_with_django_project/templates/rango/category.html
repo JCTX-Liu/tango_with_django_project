@@ -22,7 +22,10 @@
         <strong>No pages currently in category.</strong>
     {% endif %}
 
+    {% if user.is_authenticated %}
     <p><a href="{% url 'rango:add_page' category.slug %}">Add a New Page</a></p>
+    {% endif %}
+
     <p><a href="{% url 'rango:index' %}">Back to Index</a></p>
 
 {% else %}
